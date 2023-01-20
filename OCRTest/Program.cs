@@ -9,13 +9,14 @@
 using IronOcr;
 using OCRTest;
 
-string imageText = new IronTesseract().Read(@"G:\repository-open-graph-templateTest.png").Text;
+string imageText = new IronTesseract().Read(@"G:\repository-open-graph-template.png").Text;
 
 var fixText = imageText.ToLower();
+Console.WriteLine(imageText);
 
-if (!string.IsNullOrEmpty(fixText) && fixText == Constant.MyText.ToLower())
-{
-    Console.WriteLine(imageText);
-}
+//if (!string.IsNullOrEmpty(fixText) && fixText == Constant.MyText.ToLower())
+//{
+    
+//}
 
 Console.ReadKey();
